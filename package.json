@@ -1,0 +1,13 @@
+{
+  "name": "formula1-landing-page",
+  "version": "1.0.0",
+  "description": "One-page Formula 1 landing page built with HTML and SCSS",
+  "private": true,
+  "scripts": {
+    "scss": "sass src/styles/main.scss src/css/main.css --watch",
+    "build": "sass src/styles/main.scss src/css/main.css --style=compressed"
+  },
+  "devDependencies": {
+    "sass": "^1.97.1"
+  }
+}
