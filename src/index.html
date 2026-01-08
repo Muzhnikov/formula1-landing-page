@@ -3,9 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <title>Formula 1 pet project</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
+    <header class="header">
+        <h1>Formula 1</h1>
+        <nav class="nav">
+            <ul class="nav__list">
+                <li ><a href="#teams" class="nav__link">Команды</a></li>
+                <li><a href="#drivers" class="nav__link">Гонщики</a></li>
+                <li><a href="#calendar" class="nav__link">Календарь гонок</a></li>
+                <li><a href="#about" class="nav__link">О проекте</a></li>
+            </ul>
+        </nav>
+    </header>
 
+    <main>
+        <section class="hero">
+            <h1 class="hero-title"></h1>
+        </section>
+        <section class="teams" id="teams">
+            <h2 class="section-title">Команды</h2>
+            <div class="teams__grid">
+                <article class="team-card">
+                    <h3 class="team-name">Red Bull Racing</h3>
+                    <p class="team-country">Австрия</p>
+                </article>
+                <article class="team-card">
+                    <h3 class="team-name">Ferrari</h3>
+                    <p class="team-country">Италия</p>
+                </article>
+                <article class="team-card">
+                    <h3 class="team-name">Mercedes</h3>
+                    <p class="team-country">Германия</p>
+                </article>
+                <article class="team-card">
+                    <h3 class="team-name">Aston Martin</h3>
+                    <p class="team-country">Великобритания</p>
+                </article>
+                <article class="team-card">
+                    <h3 class="team-name">McLaren</h3>
+                    <p class="team-country">Великобритания</p>
+                </article>
+            </div>
+        </section>
+        <section class="drivers" id="drivers">
+            <h2 class="section-title">Гонщики</h2>
+            <div class="drivers__grid">
+                <article class="driver-card">
+                    <span class="driver-number">33</span>
+                    <h3 class="driver-name">Max Verstappen</h3>
+                    <p class="team-name">Red Bull Racing</p>
+                </article>
+                <article class="driver-card">
+                    <span class="driver-number">16</span>
+                    <h3 class="driver-name">Charles Leclerc</h3>
+                    <p class="team-name">Ferrari</p>
+                </article>
+                <article class="driver-card">
+                    <span class="driver-number">63</span>
+                    <h3 class="driver-name">George Russell</h3>
+                    <p class="team-name">Mercedes</p>
+                </article>
+                <article class="driver-card">
+                    <span class="driver-number">14</span>
+                    <h3 class="driver-name">Fernando Alonso</h3>
+                    <p class="team-name">Aston Martin</p>
+                </article>
+                <article class="driver-card">
+                    <span class="driver-number">81</span>
+                    <h3 class="driver-name">Oscar Piastri</h3>
+                    <p class="team-name">McLaren</p>
+                </article>
+            </div>
+        </section>
+        <section class="calendar" id="calendar">
+            <h2 class="section-title">Календарь гонок 2025</h2>
+            <ul class="calendar__list">
+                <li class="calendar-item">
+                    <span class="race-name"></span>
+                    <span class="race-date"></span>
+                </li>
+            </ul>
+        </section>
+        <section class="about" id="about">
+            <h2 class="section-title"></h2>
+
+        </section>
+    </main>
+
+    <footer class="footer"></footer>
 </body>
 </html>
