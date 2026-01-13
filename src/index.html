@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formula 1 pet project</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -10,91 +11,126 @@
 </head>
 <body>
     <header class="header">
-        <h1>Formula 1</h1>
-        <nav class="nav">
-            <ul class="nav__list">
-                <li ><a href="#teams" class="nav__link">Команды</a></li>
-                <li><a href="#drivers" class="nav__link">Гонщики</a></li>
-                <li><a href="#calendar" class="nav__link">Календарь гонок</a></li>
-                <li><a href="#about" class="nav__link">О проекте</a></li>
-            </ul>
-        </nav>
+        <div class="container header__container">
+            <div class="header__logo">Formula 1</div>
+
+            <input class="side-menu" type="checkbox" id="side-menu"/>
+            <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
+
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li><a href="#teams" class="nav__link">Teams</a></li>
+                    <li><a href="#drivers" class="nav__link">Drivers</a></li>
+                    <li><a href="#calendar" class="nav__link">Calendar</a></li>
+                    <li><a href="#about" class="nav__link">About</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <main>
         <section class="hero">
-            <h1 class="hero-title"></h1>
+            <div class="container">
+                <h1 class="hero-title">Formula 1 World Championship</h1>
+            </div>
         </section>
         <section class="teams" id="teams">
-            <h2 class="section-title">Команды</h2>
-            <div class="teams__grid">
-                <article class="team-card">
-                    <h3 class="team-name">Red Bull Racing</h3>
-                    <p class="team-country">Австрия</p>
-                </article>
-                <article class="team-card">
-                    <h3 class="team-name">Ferrari</h3>
-                    <p class="team-country">Италия</p>
-                </article>
-                <article class="team-card">
-                    <h3 class="team-name">Mercedes</h3>
-                    <p class="team-country">Германия</p>
-                </article>
-                <article class="team-card">
-                    <h3 class="team-name">Aston Martin</h3>
-                    <p class="team-country">Великобритания</p>
-                </article>
-                <article class="team-card">
-                    <h3 class="team-name">McLaren</h3>
-                    <p class="team-country">Великобритания</p>
-                </article>
+            <div class="container">
+                <h2 class="section-title">Teams</h2>
+                <div class="teams__grid">
+                    <article class="team-card">
+                        <h3 class="team-name">Red Bull Racing</h3>
+                        <p class="team-country">Austria</p>
+                    </article>
+                    <article class="team-card">
+                        <h3 class="team-name">Ferrari</h3>
+                        <p class="team-country">Italy</p>
+                    </article>
+                    <article class="team-card">
+                        <h3 class="team-name">Mercedes</h3>
+                        <p class="team-country">Germany</p>
+                    </article>
+                    <article class="team-card">
+                        <h3 class="team-name">Aston Martin</h3>
+                        <p class="team-country">Great Britain</p>
+                    </article>
+                    <article class="team-card">
+                        <h3 class="team-name">McLaren</h3>
+                        <p class="team-country">Great Britain</p>
+                    </article>
+                </div>
             </div>
         </section>
         <section class="drivers" id="drivers">
-            <h2 class="section-title">Гонщики</h2>
-            <div class="drivers__grid">
-                <article class="driver-card">
-                    <span class="driver-number">33</span>
-                    <h3 class="driver-name">Max Verstappen</h3>
-                    <p class="team-name">Red Bull Racing</p>
-                </article>
-                <article class="driver-card">
-                    <span class="driver-number">16</span>
-                    <h3 class="driver-name">Charles Leclerc</h3>
-                    <p class="team-name">Ferrari</p>
-                </article>
-                <article class="driver-card">
-                    <span class="driver-number">63</span>
-                    <h3 class="driver-name">George Russell</h3>
-                    <p class="team-name">Mercedes</p>
-                </article>
-                <article class="driver-card">
-                    <span class="driver-number">14</span>
-                    <h3 class="driver-name">Fernando Alonso</h3>
-                    <p class="team-name">Aston Martin</p>
-                </article>
-                <article class="driver-card">
-                    <span class="driver-number">81</span>
-                    <h3 class="driver-name">Oscar Piastri</h3>
-                    <p class="team-name">McLaren</p>
-                </article>
+            <div class="container">
+                <h2 class="section-title">Drivers</h2>
+                <div class="drivers__grid">
+                    <article class="driver-card">
+                        <span class="driver-number">33</span>
+                        <h3 class="driver-name">Max Verstappen</h3>
+                        <p class="team-name">Red Bull Racing</p>
+                    </article>
+                    <article class="driver-card">
+                        <span class="driver-number">16</span>
+                        <h3 class="driver-name">Charles Leclerc</h3>
+                        <p class="team-name">Ferrari</p>
+                    </article>
+                    <article class="driver-card">
+                        <span class="driver-number">63</span>
+                        <h3 class="driver-name">George Russell</h3>
+                        <p class="team-name">Mercedes</p>
+                    </article>
+                    <article class="driver-card">
+                        <span class="driver-number">14</span>
+                        <h3 class="driver-name">Fernando Alonso</h3>
+                        <p class="team-name">Aston Martin</p>
+                    </article>
+                    <article class="driver-card">
+                        <span class="driver-number">81</span>
+                        <h3 class="driver-name">Oscar Piastri</h3>
+                        <p class="team-name">McLaren</p>
+                    </article>
+                </div>
             </div>
         </section>
         <section class="calendar" id="calendar">
-            <h2 class="section-title">Календарь гонок 2025</h2>
-            <ul class="calendar__list">
-                <li class="calendar-item">
-                    <span class="race-name"></span>
-                    <span class="race-date"></span>
-                </li>
-            </ul>
+            <div class="container">
+                <h2 class="section-title">Race calendar 2025</h2>
+                <ul class="calendar__list">
+                    <li class="calendar-item">
+                        <span class="race-name">Japan Grand Prix</span>
+                        <span class="race-date">04-06 Apr</span>
+                    </li>
+                    <li class="calendar-item">
+                        <span class="race-name">Great Britain Grand Prix</span>
+                        <span class="race-date">04-06 Jul</span>
+                    </li>
+                    <li class="calendar-item">
+                        <span class="race-name">Mexico Grand Prix</span>
+                        <span class="race-date">24-26 Oct</span>
+                    </li>
+                    <li class="calendar-item">
+                        <span class="race-name">Brazil Grand Prix</span>
+                        <span class="race-date">07-09 Nov</span>
+                    </li>
+                    <li class="calendar-item">
+                        <span class="race-name">Abu Dhabi Grand Prix</span>
+                        <span class="race-date">05-07 Dec</span>
+                    </li>
+                </ul>
+            </div>
         </section>
         <section class="about" id="about">
-            <h2 class="section-title"></h2>
-
+            <div class="container">
+                <h2 class="section-title"></h2>
+            </div>
         </section>
     </main>
 
-    <footer class="footer"></footer>
+    <footer class="footer">
+        <div class="container">
+
+        </div>
+    </footer>
 </body>
 </html>
