@@ -1,0 +1,96 @@
+@use '../abstracts/animations' as *;
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+
+  background: url('../assets/images/hero/spa-circuit.jpg') center/cover no-repeat;
+
+  &::before {
+    @include overlay();
+  }
+
+  &__container {
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  &__content {
+    color: $color-text-primary;
+    animation: fadeUp 1s forwards;
+
+    .hero__label {
+      font-family: $font-accent;
+      color: $color-accent;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      font-size: 1.5rem;
+      margin-bottom: 16px;
+    }
+
+    .hero__title {
+      font-size: 3rem;
+      margin-bottom: 16px;
+    }
+
+    .hero__description {
+      font-size: 1.2rem;
+      margin-bottom: 24px;
+    }
+
+    .hero__actions {
+      display: flex;
+      gap: 16px;
+    }
+  }
+
+  &__visual {
+    animation: slideIn 1.5s forwards;
+    img {
+      width: 100%;
+      max-width: 600px;
+      filter: drop-shadow(0 10px 20px rgba(255, 255, 255, 0.5));
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .hero {
+    &__container {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    &__visual {
+      order: -1;
+      margin-bottom: 30px;
+
+      img {
+        max-width: 480px;
+      }
+    }
+
+    &__actions {
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .hero {
+    &__visual {
+      img {
+        max-width: 280px;
+      }
+    }
+  }
+}

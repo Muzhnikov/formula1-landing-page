@@ -30,8 +30,31 @@
 
     <main>
         <section class="hero">
-            <div class="container">
-                <h1 class="hero-title">Formula 1 World Championship</h1>
+            <div class="container hero__container">
+                <div class="hero__content">
+                    <span class="hero__label">Formula 1 World Championship</span>
+
+                    <h1 class="hero__title">The Pinnacle of Speed</h1>
+
+                    <p class="hero__description">
+                        Formula 1 is the ultimate combination of speed,
+                        technology and human limits.
+                    </p>
+
+                    <div class="hero__actions">
+                        <a href="#teams" class="btn btn--primary btn--pulse">
+                            <span>Explore teams</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right-icon lucide-arrow-right"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                        </a>
+                        <a href="#drivers" class="btn btn--secondary">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users-icon lucide-users"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><path d="M16 3.128a4 4 0 0 1 0 7.744"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><circle cx="9" cy="7" r="4"/></svg>
+                            <span>Meet the drivers</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="hero__visual">
+                    <img src="assets/images/hero/f1-red-bull-rb21.png" alt="Formula 1 car" />
+                </div>
             </div>
         </section>
         <section class="teams" id="teams">
@@ -132,5 +155,20 @@
 
         </div>
     </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.getElementById('side-menu');
+            const navLinks = document.querySelectorAll('.nav__link');
+
+            navLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    if (menuToggle) {
+                        menuToggle.checked = false;
+                    }
+                    document.body.style.overflow = 'auto';
+                });
+            });
+        });
+    </script>
 </body>
 </html>

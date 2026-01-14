@@ -62,7 +62,7 @@
   overflow: hidden;
   vertical-align: middle;
 
-  font-size: 14px;
+  font-size: 18px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   text-decoration: none;
@@ -141,6 +141,7 @@ body:has(.side-menu:checked) {
 
     &__link {
       padding: 0;
+      font-size: 14px;
     }
   }
 }

@@ -1,0 +1,6 @@
+@mixin overlay($color: rgba(0, 0, 0, 0.6)) {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: $color;
+}

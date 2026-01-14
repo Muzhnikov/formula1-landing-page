@@ -4,7 +4,10 @@
   position: sticky;
   top: 0;
   width: 100%;
+  min-height: 10vh;
   z-index: 1000;
+  display: flex;
+  align-items: center;
   //background-color: rgba(11, 11, 11, 0.9);
   background-color: rgba(21, 21, 30, 0.9);
   backdrop-filter: blur(6px);
