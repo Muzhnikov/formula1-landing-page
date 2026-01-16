@@ -86,6 +86,28 @@ p {
   color: #b3b3b3;
 }
 
+.team-name {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 2rem;
+  letter-spacing: 0.1rem;
+}
+
+.section-heading {
+  text-align: center;
+  font-size: 2.5rem;
+  font-family: "Bebas Neue", sans-serif;
+  letter-spacing: 0.1rem;
+  margin-bottom: 60px;
+}
+.section-heading::after {
+  content: "";
+  display: block;
+  width: 150px;
+  height: 3px;
+  background: #e10600;
+  margin: 15px auto 0;
+}
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -430,21 +452,6 @@ body:has(.side-menu:checked) {
   padding: 100px 0;
   background: linear-gradient(180deg, #202020 0%, #171717 100%);
 }
-.teams .section-title-main {
-  text-align: center;
-  font-size: 2.5rem;
-  font-family: "Bebas Neue", sans-serif;
-  letter-spacing: 0.1rem;
-  margin-bottom: 60px;
-}
-.teams .section-title-main::after {
-  content: "";
-  display: block;
-  width: 150px;
-  height: 3px;
-  background: #e10600;
-  margin: 15px auto 0;
-}
 .teams::before {
   content: "";
   position: absolute;
@@ -485,12 +492,6 @@ body:has(.side-menu:checked) {
 .team-block__logo {
   width: 64px;
   flex-shrink: 0;
-}
-
-.team-name {
-  font-family: "Bebas Neue", sans-serif;
-  font-size: 2rem;
-  letter-spacing: 0.1rem;
 }
 
 .team-subtitle {
@@ -587,20 +588,18 @@ body:has(.side-menu:checked) {
   margin-bottom: 12px;
 }
 
-.driver-number {
-  font-weight: 700;
-  color: #b3b3b3;
-}
-
-.driver-nationality {
-  font-size: 0.8rem;
-  color: #b3b3b3;
-}
-
 .team-content__section .section-title, .team-content__description .section-title {
   margin-bottom: 16px;
   font-size: 1.1rem;
   opacity: 0.9;
+}
+.team-content__section .driver-number, .team-content__description .driver-number {
+  font-weight: 700;
+  color: #b3b3b3;
+}
+.team-content__section .driver-nationality, .team-content__description .driver-nationality {
+  font-size: 0.8rem;
+  color: #b3b3b3;
 }
 
 .technical-list li {
