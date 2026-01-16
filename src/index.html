@@ -59,28 +59,506 @@
         </section>
         <section class="teams" id="teams">
             <div class="container">
-                <h2 class="section-title">Teams</h2>
-                <div class="teams__grid">
-                    <article class="team-card">
-                        <h3 class="team-name">Red Bull Racing</h3>
-                        <p class="team-country">Austria</p>
-                    </article>
-                    <article class="team-card">
-                        <h3 class="team-name">Ferrari</h3>
-                        <p class="team-country">Italy</p>
-                    </article>
-                    <article class="team-card">
-                        <h3 class="team-name">Mercedes</h3>
-                        <p class="team-country">Germany</p>
-                    </article>
-                    <article class="team-card">
-                        <h3 class="team-name">Aston Martin</h3>
-                        <p class="team-country">Great Britain</p>
-                    </article>
-                    <article class="team-card">
-                        <h3 class="team-name">McLaren</h3>
-                        <p class="team-country">Great Britain</p>
-                    </article>
+                <h2 class="section-title-main">Formula 1 Teams 2025</h2>
+                <div class="teams__container">
+                    <div class="team-block team-block--redbull">
+                        <div class="team-block__header">
+                            <div class="team-block__main-info">
+                                <div class="team-block__logo">
+                                    <img src="assets/images/teams/logos/redbull-logo.png" alt="Red Bull Logo">
+                                </div>
+                                <div class="team-block__title">
+                                    <h3 class="team-name">Red Bull Racing</h3>
+                                    <div class="team-subtitle">
+                                        <span class="team-country">Austria</span>
+                                        <span class="team-base">Milton Keynes, UK</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="team-block__car">
+                                <img src="assets/images/cars/redbull-car.png" alt="Red Bull RB21" />
+                                <div class="car-shadow"></div>
+                            </div>
+
+                            <div class="team-block__stats">
+                                <div class="team-stat">
+                                    <span class="stat-value">6</span>
+                                    <span class="stat-label">Titles</span>
+                                </div>
+                                <div class="team-stat">
+                                    <span class="stat-value">130</span>
+                                    <span class="stat-label">Wins</span>
+                                </div>
+                                <div class="team-stat">
+                                    <span class="stat-value">2005</span>
+                                    <span class="stat-label">Debut</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <input type="checkbox" id="redbull-details" class="team-details-toggle">
+                        <label for="redbull-details" class="team-details-btn">
+                            <span>View Details</span>
+                            <svg class="details-icon" viewBox="0 0 24 24">
+                                <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
+                            </svg>
+                        </label>
+
+                        <div class="team-block__content">
+                            <div class="team-content__grid">
+                                <div class="team-content__section">
+                                    <h4 class="section-title">Drivers 2025</h4>
+                                    <div class="drivers-list">
+                                        <div class="driver">
+                                            <span class="driver-number">1</span>
+                                            <div class="driver-info">
+                                                <strong>Max Verstappen</strong>
+                                                <span class="driver-nationality">Netherlands</span>
+                                            </div>
+                                        </div>
+                                        <div class="driver">
+                                            <span class="driver-number">22</span>
+                                            <div class="driver-info">
+                                                <strong>Yuki Tsunoda</strong>
+                                                <span class="driver-nationality">Japan</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="team-content__section">
+                                    <h4 class="section-title">Technical Details</h4>
+                                    <ul class="technical-list">
+                                        <li><strong>Chassis:</strong> RB21</li>
+                                        <li><strong>Power Unit:</strong> Honda RBPT</li>
+                                        <li><strong>Team Principal:</strong> Laurent Mekies</li>
+                                        <li><strong>Technical Director:</strong> Pierre Waché</li>
+                                    </ul>
+                                </div>
+
+                                <div class="team-content__section">
+                                    <h4 class="section-title">Achievements</h4>
+                                    <div class="achievements">
+                                        <div class="achievement">
+                                            <span class="achievement-year">2010-2013</span>
+                                            <span class="achievement-title">4 consecutive titles (Vettel)</span>
+                                        </div>
+                                        <div class="achievement">
+                                            <span class="achievement-year">2021-2024</span>
+                                            <span class="achievement-title">4 consecutive titles (Verstappen)</span>
+                                        </div>
+                                        <div class="achievement">
+                                            <span class="achievement-year">2023</span>
+                                            <span class="achievement-title">21 wins in a season (record)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="team-content__description">
+                                <h4 class="section-title">About the Team</h4>
+                                <p>Red Bull Racing, competing as Oracle Red Bull Racing, is one of the most successful teams in modern F1 history. Known for their aerodynamic innovation and dominant performances, they've revolutionized the sport with concepts like the blown diffuser and advanced energy recovery systems.</p>
+                                <p>The team holds multiple records including most wins in a season (21 in 2023) and longest winning streak (15 races in 2023).</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="team-block team-block--ferrari">
+                        <div class="team-block__header">
+                            <div class="team-block__main-info">
+                                <div class="team-block__logo">
+                                    <img src="assets/images/teams/logos/ferrari-logo.png" alt="Ferrari Logo">
+                                </div>
+                                <div class="team-block__title">
+                                    <h3 class="team-name">Scuderia Ferrari</h3>
+                                    <div class="team-subtitle">
+                                        <span class="team-country">Italy</span>
+                                        <span class="team-base">Maranello, Italy</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="team-block__car">
+                                <img src="assets/images/cars/ferrari-car.png" alt="SF-25" />
+                                <div class="car-shadow"></div>
+                            </div>
+
+                            <div class="team-block__stats">
+                                <div class="team-stat">
+                                    <span class="stat-value">16</span>
+                                    <span class="stat-label">Titles</span>
+                                </div>
+                                <div class="team-stat">
+                                    <span class="stat-value">247</span>
+                                    <span class="stat-label">Wins</span>
+                                </div>
+                                <div class="team-stat">
+                                    <span class="stat-value">1950</span>
+                                    <span class="stat-label">Debut</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <input type="checkbox" id="ferrari-details" class="team-details-toggle">
+                        <label for="ferrari-details" class="team-details-btn">
+                            <span>View Details</span>
+                            <svg class="details-icon" viewBox="0 0 24 24">
+                                <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
+                            </svg>
+                        </label>
+
+                        <div class="team-block__content">
+                            <div class="team-content__grid">
+                                <div class="team-content__section">
+                                    <h4 class="section-title">Drivers 2025</h4>
+                                    <div class="drivers-list">
+                                        <div class="driver">
+                                            <span class="driver-number">16</span>
+                                            <div class="driver-info">
+                                                <strong>Charles Leclerc</strong>
+                                                <span class="driver-nationality">🇲🇨 Monaco</span>
+                                            </div>
+                                        </div>
+                                        <div class="driver">
+                                            <span class="driver-number">44</span>
+                                            <div class="driver-info">
+                                                <strong>Lewis Hamilton</strong>
+                                                <span class="driver-nationality">Great Britain</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="team-content__section">
+                                    <h4 class="section-title">Technical Details</h4>
+                                    <ul class="technical-list">
+                                        <li><strong>Chassis:</strong> SF-25</li>
+                                        <li><strong>Power Unit:</strong> Ferrari</li>
+                                        <li><strong>Team Principal:</strong> Frédéric Vasseur</li>
+                                        <li><strong>Technical Director:</strong> Loïc Serra</li>
+                                    </ul>
+                                </div>
+
+                                <div class="team-content__section">
+                                    <h4 class="section-title">Notable Facts</h4>
+                                    <div class="achievements">
+                                        <div class="fact">
+                                            <span class="fact-title">Oldest & Most Successful</span>
+                                            <span class="fact-desc">Only team to compete in every F1 season since 1950</span>
+                                        </div>
+                                        <div class="fact">
+                                            <span class="fact-title">Iconic Drivers</span>
+                                            <span class="fact-desc">Schumacher, Lauda, Prost, Alonso, Vettel</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="team-content__description">
+                                <h4 class="section-title">About the Team</h4>
+                                <p>Scuderia Ferrari is the oldest and most successful team in Formula 1 history. Competing in every championship since 1950, Ferrari is more than a racing team - it's an institution in motorsport. The passionate tifosi (Ferrari fans) create an atmosphere like no other at every Grand Prix.</p>
+                                <p>Ferrari's factory in Maranello is a state-of-the-art facility where road cars and F1 cars are developed side by side, creating a unique synergy between racing and production vehicles.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="team-block team-block--mercedes">
+                        <div class="team-block__header">
+                            <div class="team-block__main-info">
+                                <div class="team-block__logo">
+                                    <img src="assets/images/teams/logos/mercedes-logo.png" alt="Mercedes Logo">
+                                </div>
+                                <div class="team-block__title">
+                                    <h3 class="team-name">Mercedes-AMG</h3>
+                                    <div class="team-subtitle">
+                                        <span class="team-country">Germany</span>
+                                        <span class="team-base">Brackley, UK</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="team-block__car">
+                                <img src="assets/images/cars/mercedes-car.png" alt="Mercedes W16" />
+                                <div class="car-shadow"></div>
+                            </div>
+
+                            <div class="team-block__stats">
+                                <div class="team-stat">
+                                    <span class="stat-value">8</span>
+                                    <span class="stat-label">Titles</span>
+                                </div>
+                                <div class="team-stat">
+                                    <span class="stat-value">131</span>
+                                    <span class="stat-label">Wins</span>
+                                </div>
+                                <div class="team-stat">
+                                    <span class="stat-value">2010</span>
+                                    <span class="stat-label">Debut</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <input type="checkbox" id="mercedes-details" class="team-details-toggle">
+                        <label for="mercedes-details" class="team-details-btn">
+                            <span>View Details</span>
+                            <svg class="details-icon" viewBox="0 0 24 24">
+                                <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
+                            </svg>
+                        </label>
+
+                        <div class="team-block__content">
+                            <div class="team-content__grid">
+                                <div class="team-content__section">
+                                    <h4 class="section-title">Drivers 2025</h4>
+                                    <div class="drivers-list">
+                                        <div class="driver">
+                                            <span class="driver-number">63</span>
+                                            <div class="driver-info">
+                                                <strong>George Russell</strong>
+                                                <span class="driver-nationality">Great Britain</span>
+                                            </div>
+                                        </div>
+                                        <div class="driver">
+                                            <span class="driver-number">12</span>
+                                            <div class="driver-info">
+                                                <strong>Andrea Kimi Antonelli</strong>
+                                                <span class="driver-nationality">Italy</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="team-content__section">
+                                    <h4 class="section-title">Technical Details</h4>
+                                    <ul class="technical-list">
+                                        <li><strong>Chassis:</strong> W16</li>
+                                        <li><strong>Power Unit:</strong> Mercedes</li>
+                                        <li><strong>Team Principal:</strong> Toto Wolff</li>
+                                        <li><strong>Technical Director:</strong> James Allison</li>
+                                    </ul>
+                                </div>
+
+                                <div class="team-content__section">
+                                    <h4 class="section-title">Dominant Era</h4>
+                                    <div class="achievements">
+                                        <div class="achievement">
+                                            <span class="achievement-year">2014-2021</span>
+                                            <span class="achievement-title">8 consecutive Constructors' titles</span>
+                                        </div>
+                                        <div class="achievement">
+                                            <span class="achievement-year">2014-2020</span>
+                                            <span class="achievement-title">7 consecutive Drivers' titles (Hamilton, Rosberg)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="team-content__description">
+                                <h4 class="section-title">About the Team</h4>
+                                <p>Mercedes-AMG Petronas Formula One Team dominated the hybrid era with unprecedented success. From 2014 to 2021, they won 8 consecutive Constructors' Championships, setting new standards for technical excellence and team operations.</p>
+                                <p>The team's success was built on their innovative power unit technology and a culture of relentless improvement. Their "no-blame" culture and data-driven approach became the blueprint for modern F1 teams.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="team-block team-block--mclaren">
+                        <div class="team-block__header">
+                            <div class="team-block__main-info">
+                                <div class="team-block__logo">
+                                    <img src="assets/images/teams/logos/mclaren-logo.png" alt="McLaren Logo">
+                                </div>
+                                <div class="team-block__title">
+                                    <h3 class="team-name">McLaren Racing</h3>
+                                    <div class="team-subtitle">
+                                        <span class="team-country">Great Britain</span>
+                                        <span class="team-base">Woking, UK</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="team-block__car">
+                                <img src="assets/images/cars/mclaren-car.png" alt="MCL39" />
+                                <div class="car-shadow"></div>
+                            </div>
+
+                            <div class="team-block__stats">
+                                <div class="team-stat">
+                                    <span class="stat-value">10</span>
+                                    <span class="stat-label">Titles</span>
+                                </div>
+                                <div class="team-stat">
+                                    <span class="stat-value">203</span>
+                                    <span class="stat-label">Wins</span>
+                                </div>
+                                <div class="team-stat">
+                                    <span class="stat-value">1966</span>
+                                    <span class="stat-label">Debut</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <input type="checkbox" id="mclaren-details" class="team-details-toggle">
+                        <label for="mclaren-details" class="team-details-btn">
+                            <span>View Details</span>
+                            <svg class="details-icon" viewBox="0 0 24 24">
+                                <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
+                            </svg>
+                        </label>
+
+                        <div class="team-block__content">
+                            <div class="team-content__grid">
+                                <div class="team-content__section">
+                                    <h4 class="section-title">Drivers 2025</h4>
+                                    <div class="drivers-list">
+                                        <div class="driver">
+                                            <span class="driver-number">81</span>
+                                            <div class="driver-info">
+                                                <strong>Oscar Piastri</strong>
+                                                <span class="driver-nationality">Australia</span>
+                                            </div>
+                                        </div>
+                                        <div class="driver">
+                                            <span class="driver-number">4</span>
+                                            <div class="driver-info">
+                                                <strong>Lando Norris</strong>
+                                                <span class="driver-nationality">Great Britain</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="team-content__section">
+                                    <h4 class="section-title">Technical Details</h4>
+                                    <ul class="technical-list">
+                                        <li><strong>Chassis:</strong> MCL39</li>
+                                        <li><strong>Power Unit:</strong> Mercedes</li>
+                                        <li><strong>Team Principal:</strong> Andrea Stella, Zak Brown</li>
+                                        <li><strong>Technical Director:</strong> Rob Marshall</li>
+                                    </ul>
+                                </div>
+
+                                <div class="team-content__section">
+                                    <h4 class="section-title">Legacy</h4>
+                                    <div class="achievements">
+                                        <div class="fact">
+                                            <span class="fact-title">Innovation Pioneers</span>
+                                            <span class="fact-desc">First carbon fiber chassis (MP4/1)</span>
+                                        </div>
+                                        <div class="fact">
+                                            <span class="fact-title">Legendary Drivers</span>
+                                            <span class="fact-desc">Senna, Prost, Häkkinen, Hamilton</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="team-content__description">
+                                <h4 class="section-title">About the Team</h4>
+                                <p>McLaren Racing is one of the most successful teams in F1 history with a legacy of innovation. Founded by Bruce McLaren, the team introduced groundbreaking technologies including the first carbon fiber composite chassis in 1981.</p>
+                                <p>Known for their iconic papaya orange livery, McLaren combines cutting-edge technology with a rich racing heritage. Their factory in Woking features the McLaren Technology Centre, an architectural marvel designed by Norman Foster.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="team-block team-block--aston-martin">
+                        <div class="team-block__header">
+                            <div class="team-block__main-info">
+                                <div class="team-block__logo">
+                                    <img src="assets/images/teams/logos/aston-martin-logo.png" alt="Aston Martin Logo">
+                                </div>
+                                <div class="team-block__title">
+                                    <h3 class="team-name">Aston Martin</h3>
+                                    <div class="team-subtitle">
+                                        <span class="team-country">Great Britain</span>
+                                        <span class="team-base">Silverstone, UK</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="team-block__car">
+                                <img src="assets/images/cars/aston-martin-car.png" alt="AMR25" />
+                                <div class="car-shadow"></div>
+                            </div>
+
+                            <div class="team-block__stats">
+                                <div class="team-stat">
+                                    <span class="stat-value">0</span>
+                                    <span class="stat-label">Titles</span>
+                                </div>
+                                <div class="team-stat">
+                                    <span class="stat-value">0</span>
+                                    <span class="stat-label">Wins</span>
+                                </div>
+                                <div class="team-stat">
+                                    <span class="stat-value">2021</span>
+                                    <span class="stat-label">Debut</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <input type="checkbox" id="aston-details" class="team-details-toggle">
+                        <label for="aston-details" class="team-details-btn">
+                            <span>View Details</span>
+                            <svg class="details-icon" viewBox="0 0 24 24">
+                                <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
+                            </svg>
+                        </label>
+
+                        <div class="team-block__content">
+                            <div class="team-content__grid">
+                                <div class="team-content__section">
+                                    <h4 class="section-title">Drivers 2025</h4>
+                                    <div class="drivers-list">
+                                        <div class="driver">
+                                            <span class="driver-number">14</span>
+                                            <div class="driver-info">
+                                                <strong>Fernando Alonso</strong>
+                                                <span class="driver-nationality">Spain</span>
+                                            </div>
+                                        </div>
+                                        <div class="driver">
+                                            <span class="driver-number">18</span>
+                                            <div class="driver-info">
+                                                <strong>Lance Stroll</strong>
+                                                <span class="driver-nationality">Canada</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="team-content__section">
+                                    <h4 class="section-title">Technical Details</h4>
+                                    <ul class="technical-list">
+                                        <li><strong>Chassis:</strong> AMR25</li>
+                                        <li><strong>Power Unit:</strong> Mercedes</li>
+                                        <li><strong>Team Principal:</strong> Mike Krack</li>
+                                        <li><strong>Technical Director:</strong> Dan Fallows</li>
+                                    </ul>
+                                </div>
+
+                                <div class="team-content__section">
+                                    <h4 class="section-title">Recent Success</h4>
+                                    <div class="achievements">
+                                        <div class="achievement">
+                                            <span class="achievement-year">2023</span>
+                                            <span class="achievement-title">8 podiums in season</span>
+                                        </div>
+                                        <div class="achievement">
+                                            <span class="achievement-year">2024</span>
+                                            <span class="achievement-title">New Silverstone factory</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="team-content__description">
+                                <h4 class="section-title">About the Team</h4>
+                                <p>Aston Martin Aramco Formula One Team has undergone a remarkable transformation since its rebranding. With significant investment and the opening of a new state-of-the-art factory at Silverstone, the team has emerged as a regular podium contender.</p>
+                                <p>The team's British racing green livery pays homage to Aston Martin's rich heritage in motorsport, while their technical partnership with Mercedes provides a strong foundation for future success.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>

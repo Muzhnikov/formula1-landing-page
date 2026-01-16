@@ -59,6 +59,9 @@ select {
 /*
   Цвета
 */
+/*
+  Цвета команд
+*/
 body {
   font-family: "Inter", sans-serif;
   font-size: 16px;
@@ -276,6 +279,16 @@ body:has(.side-menu:checked) {
     box-shadow: 0 4px 20px rgba(225, 6, 0, 0.5);
   }
 }
+@keyframes fadeUpTeam {
+  from {
+    opacity: 0;
+    transform: translateY(40px) scale(0.75);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
 .hero {
   position: relative;
   width: 100%;
@@ -410,6 +423,271 @@ body:has(.side-menu:checked) {
 .btn--secondary {
   background: linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 100%);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.teams {
+  position: relative;
+  padding: 100px 0;
+  background: linear-gradient(180deg, #202020 0%, #171717 100%);
+}
+.teams .section-title-main {
+  text-align: center;
+  font-size: 2.5rem;
+  font-family: "Bebas Neue", sans-serif;
+  letter-spacing: 0.1rem;
+  margin-bottom: 60px;
+}
+.teams .section-title-main::after {
+  content: "";
+  display: block;
+  width: 150px;
+  height: 3px;
+  background: #e10600;
+  margin: 15px auto 0;
+}
+.teams::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(135deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.03) 1px, transparent 1px, transparent 12px);
+}
+.teams .container {
+  position: relative;
+  z-index: 1;
+}
+
+.team-block {
+  background: #0e0e0e;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-bottom: 40px;
+  border-left: 6px solid transparent;
+  transition: transform 0.3s ease;
+  animation: fadeUpTeam linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
+.team-block:hover {
+  transform: translateY(-4px);
+}
+.team-block__header {
+  padding: 32px;
+  display: grid;
+  grid-template-columns: 1.5fr 1.5fr 1fr;
+  gap: 24px;
+  align-items: center;
+}
+.team-block__main-info {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.team-block__logo {
+  width: 64px;
+  flex-shrink: 0;
+}
+
+.team-name {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 2rem;
+  letter-spacing: 0.1rem;
+}
+
+.team-subtitle {
+  display: flex;
+  gap: 12px;
+  font-size: 0.85rem;
+  color: #b3b3b3;
+}
+
+.team-block__car img {
+  transition: transform 0.4s ease;
+}
+.team-block__car:hover img {
+  transform: translateX(10px);
+}
+
+.car-shadow {
+  width: 80%;
+  height: 10px;
+  background: radial-gradient(rgba(0, 0, 0, 0.6), transparent);
+  margin: 8px auto 0;
+}
+
+.team-block__stats {
+  display: flex;
+  justify-content: space-between;
+}
+
+.team-stat {
+  text-align: center;
+}
+.team-stat .stat-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  display: block;
+}
+.team-stat .stat-label {
+  font-size: 0.75rem;
+  color: #b3b3b3;
+  text-transform: uppercase;
+}
+
+.team-details-toggle {
+  display: none;
+}
+
+.team-details-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 16px;
+  cursor: pointer;
+  font-weight: 600;
+  background: rgba(255, 255, 255, 0.04);
+  transition: background 0.3s ease;
+}
+.team-details-btn:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+.team-details-btn .details-icon {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+  transition: transform 0.3s;
+}
+
+.team-details-toggle:checked + .team-details-btn .details-icon {
+  transform: rotate(180deg);
+}
+
+.team-block__content {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.team-details-toggle:checked ~ .team-block__content {
+  max-height: 2000px;
+  opacity: 1;
+}
+
+.team-content__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  padding: 32px;
+}
+
+.driver {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.driver-number {
+  font-weight: 700;
+  color: #b3b3b3;
+}
+
+.driver-nationality {
+  font-size: 0.8rem;
+  color: #b3b3b3;
+}
+
+.team-content__section .section-title, .team-content__description .section-title {
+  margin-bottom: 16px;
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+.technical-list li {
+  margin-bottom: 8px;
+}
+
+.achievement {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.achievement-year {
+  font-weight: 600;
+  color: #b3b3b3;
+}
+
+.team-content__description {
+  padding: 0 32px 32px;
+}
+.team-content__description p {
+  margin-bottom: 12px;
+  color: #b3b3b3;
+}
+
+.team-block--redbull {
+  border-color: #4781D7;
+}
+.team-block--redbull .team-details-btn {
+  color: #4781D7;
+}
+.team-block--redbull .stat-value {
+  color: #4781D7;
+}
+
+.team-block--ferrari {
+  border-color: #ED1131;
+}
+.team-block--ferrari .team-details-btn {
+  color: #ED1131;
+}
+.team-block--ferrari .stat-value {
+  color: #ED1131;
+}
+
+.team-block--mercedes {
+  border-color: #00D7B6;
+}
+.team-block--mercedes .team-details-btn {
+  color: #00D7B6;
+}
+.team-block--mercedes .stat-value {
+  color: #00D7B6;
+}
+
+.team-block--mclaren {
+  border-color: #F47600;
+}
+.team-block--mclaren .team-details-btn {
+  color: #F47600;
+}
+.team-block--mclaren .stat-value {
+  color: #F47600;
+}
+
+.team-block--aston-martin {
+  border-color: #229971;
+}
+.team-block--aston-martin .team-details-btn {
+  color: #229971;
+}
+.team-block--aston-martin .stat-value {
+  color: #229971;
+}
+
+@media (max-width: 1024px) {
+  .team-block__header {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .team-block__stats {
+    justify-content: center;
+    gap: 24px;
+  }
+  .team-content__grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
