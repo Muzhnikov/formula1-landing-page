@@ -688,5 +688,160 @@ body:has(.side-menu:checked) {
     grid-template-columns: 1fr;
   }
 }
+.drivers {
+  padding: 100px 0;
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+  position: relative;
+  overflow: hidden;
+}
+.drivers::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 20% 80%, rgba(255, 0, 0, 0.1) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(0, 100, 255, 0.1) 0%, transparent 50%), repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.02) 0px, rgba(255, 255, 255, 0.02) 1px, transparent 1px, transparent 40px);
+}
+.drivers__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.driver-card {
+  height: 400px;
+  perspective: 1000px;
+}
+.driver-card__inner {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transform-style: preserve-3d;
+  position: relative;
+}
+.driver-card:hover .driver-card__inner {
+  transform: rotateY(180deg);
+}
+.driver-card__side {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+.driver-card--front {
+  background: linear-gradient(135deg, #1a1a1a, #0d0d0d);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 25px;
+  position: relative;
+  gap: 20px;
+}
+.driver-card--back {
+  background: linear-gradient(135deg, #0d0d0d, #1a1a1a);
+  transform: rotateY(180deg);
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 2px solid transparent;
+}
+.driver-card__bg-number {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  font-size: 200px;
+  font-weight: 900;
+  opacity: 0.3;
+  font-family: "Bebas Neue", sans-serif;
+  text-shadow: 0 0 10px currentColor;
+}
+.driver-card__photo {
+  height: 250px;
+  object-position: center;
+  z-index: 2;
+}
+.driver-card__info {
+  text-align: center;
+  width: 100%;
+}
+
+.driver-name {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 1.8rem;
+  margin-bottom: 8px;
+  letter-spacing: 0.05em;
+}
+
+.driver-team {
+  font-weight: 300;
+}
+
+.driver-details {
+  margin: 20px 0 0;
+}
+.driver-details li {
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  font-size: 0.9rem;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.driver-card--verstappen .driver-card__bg-number {
+  color: #4781D7;
+}
+.driver-card--verstappen .driver-card--back {
+  border-color: #4781D7;
+}
+.driver-card--verstappen .driver-team {
+  color: #4781D7;
+}
+
+.driver-card--leclerc .driver-card__bg-number {
+  color: #ED1131;
+}
+.driver-card--leclerc .driver-card--back {
+  border-color: #ED1131;
+}
+.driver-card--leclerc .driver-team {
+  color: #ED1131;
+}
+
+.driver-card--russell .driver-card__bg-number {
+  color: #00D7B6;
+}
+.driver-card--russell .driver-card--back {
+  border-color: #00D7B6;
+}
+.driver-card--russell .driver-team {
+  color: #00D7B6;
+}
+
+.driver-card--piastri .driver-card__bg-number {
+  color: #F47600;
+}
+.driver-card--piastri .driver-card--back {
+  border-color: #F47600;
+}
+.driver-card--piastri .driver-team {
+  color: #F47600;
+}
+
+.driver-card--alonso .driver-card__bg-number {
+  color: #229971;
+}
+.driver-card--alonso .driver-card--back {
+  border-color: #229971;
+}
+.driver-card--alonso .driver-team {
+  color: #229971;
+}
 
 /*# sourceMappingURL=main.css.map */
