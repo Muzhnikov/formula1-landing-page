@@ -108,6 +108,11 @@ p {
   margin: 15px auto 0;
 }
 
+.year {
+  color: #e10600;
+  font-weight: 300;
+}
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -699,6 +704,7 @@ body:has(.side-menu:checked) {
   position: absolute;
   inset: 0;
   background: radial-gradient(circle at 20% 80%, rgba(255, 0, 0, 0.1) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(0, 100, 255, 0.1) 0%, transparent 50%), repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.02) 0px, rgba(255, 255, 255, 0.02) 1px, transparent 1px, transparent 40px);
+  pointer-events: none;
 }
 .drivers__grid {
   display: grid;
@@ -842,6 +848,234 @@ body:has(.side-menu:checked) {
 }
 .driver-card--alonso .driver-team {
   color: #229971;
+}
+
+.calendar {
+  padding: 100px 0;
+  background: linear-gradient(180deg, #0a0c10 0%, #05060a 100%);
+  position: relative;
+  overflow: hidden;
+}
+.calendar::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(90deg, transparent, transparent 20px, rgba(255, 255, 255, 0.01) 20px, rgba(255, 255, 255, 0.01) 21px);
+  pointer-events: none;
+}
+.calendar__subtitle {
+  text-align: center;
+  color: #b3b3b3;
+  margin-bottom: 40px;
+  font-size: 1.1rem;
+  font-weight: 300;
+}
+.calendar__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+  margin-bottom: 50px;
+}
+@media (max-width: 768px) {
+  .calendar__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.calendar-card {
+  background: linear-gradient(145deg, rgba(30, 30, 30, 0.9), rgba(20, 20, 20, 0.9));
+  border-radius: 20px;
+  padding: 25px;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  position: relative;
+  overflow: hidden;
+}
+.calendar-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #e10600, #4781D7);
+  border-radius: 20px 20px 0 0;
+}
+.calendar-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+.calendar-card:hover .calendar-card__track-svg {
+  transform: scale(1.1);
+}
+.calendar-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.calendar-card__round {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.calendar-card__round-number {
+  font-size: 0.85rem;
+  color: #b3b3b3;
+  font-weight: 500;
+}
+.calendar-card__round-date {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+.calendar-card__status-badge {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.calendar-card__status-badge--upcoming {
+  background: rgba(0, 200, 83, 0.2);
+  color: #00c853;
+}
+.calendar-card__status-badge--completed {
+  background: rgba(33, 150, 243, 0.2);
+  color: #2196f3;
+}
+.calendar-card__status-badge--cancelled {
+  background: rgba(244, 67, 54, 0.2);
+  color: #f44336;
+}
+.calendar-card__content {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 25px;
+}
+@media (max-width: 576px) {
+  .calendar-card__content {
+    grid-template-columns: 1fr;
+  }
+}
+.calendar-card__info {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.calendar-card__name {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 1.6rem;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.calendar-card__circuit {
+  color: #b3b3b3;
+  font-size: 0.95rem;
+  font-weight: 300;
+}
+.calendar-card__details {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 10px;
+}
+.calendar-card__detail {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+}
+.calendar-card__detail-icon {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+  opacity: 0.7;
+}
+.calendar-card__track {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  min-width: 120px;
+}
+@media (max-width: 576px) {
+  .calendar-card__track {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+.calendar-card__track-svg {
+  width: 120px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+.calendar-card__track-svg .track-svg {
+  width: 100%;
+  height: 100%;
+  color: #e10600;
+}
+.calendar-card__track-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  text-align: center;
+}
+@media (max-width: 576px) {
+  .calendar-card__track-info {
+    align-items: end;
+  }
+}
+.calendar-card__track-length {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+.calendar-card__track-type {
+  font-size: 0.8rem;
+  color: #b3b3b3;
+  padding: 3px 8px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+}
+
+.calendar__legend {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+  padding-top: 30px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+.calendar__legend-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #b3b3b3;
+  font-size: 0.9rem;
+}
+.calendar__legend-color {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+.calendar__legend-color--upcoming {
+  background: #00c853;
+}
+.calendar__legend-color--completed {
+  background: #2196f3;
+}
+.calendar__legend-color--cancelled {
+  background: #f44336;
 }
 
 /*# sourceMappingURL=main.css.map */
