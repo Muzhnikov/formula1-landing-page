@@ -71,6 +71,7 @@
     padding: 25px;
     position: relative;
     gap:20px;
+    z-index: 2;
   }
 
   &--back {
@@ -81,6 +82,7 @@
     flex-direction: column;
     justify-content: center;
     border: 2px solid transparent;
+    z-index: 1;
   }
 
   &__bg-number {
