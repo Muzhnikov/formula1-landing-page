@@ -71,6 +71,7 @@
     padding: 25px;
     position: relative;
     gap:20px;
+    z-index: 2;
   }
 
   &--back {
@@ -81,6 +82,7 @@
     flex-direction: column;
     justify-content: center;
     border: 2px solid transparent;
+    z-index: 1;
   }
 
   &__bg-number {
@@ -94,12 +96,14 @@
     opacity: 0.3;
     font-family: $font-accent;
     text-shadow: 0 0 10px currentColor;
+    pointer-events: none;
   }
 
   &__photo {
     height: 250px;
     object-position: center;
     z-index: 2;
+    pointer-events: none;
   }
 
   &__info {

@@ -850,6 +850,7 @@ body:has(.side-menu:checked) {
   padding: 25px;
   position: relative;
   gap: 20px;
+  z-index: 2;
 }
 .driver-card--back {
   background: linear-gradient(135deg, #0d0d0d, #1a1a1a);
@@ -859,6 +860,7 @@ body:has(.side-menu:checked) {
   flex-direction: column;
   justify-content: center;
   border: 2px solid transparent;
+  z-index: 1;
 }
 .driver-card__bg-number {
   position: absolute;
@@ -871,11 +873,13 @@ body:has(.side-menu:checked) {
   opacity: 0.3;
   font-family: "Bebas Neue", sans-serif;
   text-shadow: 0 0 10px currentColor;
+  pointer-events: none;
 }
 .driver-card__photo {
   height: 250px;
   object-position: center;
   z-index: 2;
+  pointer-events: none;
 }
 .driver-card__info {
   text-align: center;
