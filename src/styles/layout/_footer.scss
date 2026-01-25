@@ -1,0 +1,125 @@
+@use '../abstracts/variables' as *;
+
+.footer {
+  background: #0a0a0a;
+  padding: 70px 0 30px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, $color-accent, transparent);
+  }
+
+  &__main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    border-bottom: 1px solid $color-border;
+    margin-bottom: 40px;
+    padding-bottom: 40px;
+
+    @media (max-width: 768px) {
+      gap: 25px;
+    }
+  }
+
+  &__brand {
+    .footer__logo {
+      font-family: $font-accent;
+      font-size: 2.2rem;
+      margin-bottom: 15px;
+      letter-spacing: 1px;
+    }
+
+    .footer__description {
+      font-size: 0.95rem;
+      max-width: 300px;
+    }
+  }
+
+  &__title {
+    font-family: $font-accent;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+  }
+
+  &__link {
+    display: block;
+    color: $color-text-secondary;
+    padding: 8px 0;
+    font-size: 0.95rem;
+    transition: all 0.3s;
+
+    &:hover {
+      color: $color-accent;
+      transform: translateX(5px);
+    }
+  }
+
+  &__developer {
+    .developer__info {
+      margin-bottom: 15px;
+
+      .developer__name {
+        color: $color-text-primary;
+        font-size: 1.1rem;
+        font-weight: 600;
+        margin-bottom: 5px;
+      }
+    }
+
+    .developer__role {
+      font-size: 0.9rem;
+    }
+  }
+
+  .developer__links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .developer__link {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 8px 16px;
+    color: $color-text-secondary;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 8px;
+    border: 1px solid $color-border;
+    transition: all 0.3s;
+
+    &:hover {
+      color: $color-text-primary;
+      background: rgba(255, 255, 255, 0.08);
+      border-color: $color-accent;
+
+      .developer__icon {
+        color: $color-accent;
+      }
+    }
+
+    .developer__icon {
+      transition: color 0.3s ease;
+    }
+
+    span {
+      font-size: 0.9rem;
+    }
+  }
+
+  &__copyright {
+    p {
+      font-size: 0.85rem;
+      text-align: center;
+    }
+  }
+}
