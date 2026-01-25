@@ -96,14 +96,12 @@
     opacity: 0.3;
     font-family: $font-accent;
     text-shadow: 0 0 10px currentColor;
-    pointer-events: none;
   }
 
   &__photo {
     height: 250px;
     object-position: center;
     z-index: 2;
-    pointer-events: none;
   }
 
   &__info {

@@ -873,13 +873,11 @@ body:has(.side-menu:checked) {
   opacity: 0.3;
   font-family: "Bebas Neue", sans-serif;
   text-shadow: 0 0 10px currentColor;
-  pointer-events: none;
 }
 .driver-card__photo {
   height: 250px;
   object-position: center;
   z-index: 2;
-  pointer-events: none;
 }
 .driver-card__info {
   text-align: center;
